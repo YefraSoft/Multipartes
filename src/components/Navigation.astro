@@ -1,0 +1,37 @@
+---
+import { routes } from "../assets/staticObjets";
+import { Icon } from "astro-icon/components";
+---
+
+<nav class="flex justify-between px-20 text-sm flex-col md:flex-row md:text-base">
+  <a
+    class="flex space-x-2 items-center justify-center hover:cursor-pointer"
+    href="/"
+  >
+    
+    <h1
+      class="text-lg md:text-3xl font-special text-alabaster-800 hover:text-alabaster-400 transition-colors duration-300"
+    >
+      M<span class="relative right-1 font-specialVariant italic"
+        >ultipartes</span
+      >
+      Garcia ´<span
+        class="relative font-specialVariant inline-block rotate-[13deg] top-0.5 right-2 md:text-4xl"
+        >s</span
+      >
+    </h1>
+  </a>
+  <ul
+    class="flex items-center justify-center gap-3 h-14 transition-colors duration-300"
+  >
+    {
+      routes.map((route) => (
+        <li>
+          <a href={route.url} class="hover:text-alabaster-400">
+            {route.title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
