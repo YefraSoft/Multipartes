@@ -1,0 +1,80 @@
+---
+import MainLayout from "../../layouts/Main-layout.astro";
+import Viewer3D from "../../components/3d-Viewer.astro";
+import SearchType from "../../components/SearchType.astro";
+---
+
+<MainLayout title="Buscador">
+  <main class="bg-alabaster-100 p-2 shadow-xl">
+    <h2 class="text-xl font-bold font-subtitle text-center">
+      Encuentra tu pieza!
+    </h2>
+    <h3 class="text-sm mt-2">Selecciona por:</h3>
+    <SearchType />
+    <Viewer3D />
+    <table
+      class="min-w-full min-h-full table-auto bg-white border-collapse shadow-md rounded-lg overflow-hidden mt-3"
+    >
+      <thead>
+        <tr class="bg-gray-200 text-left text-sm text-gray-700">
+          <th class="px-6 py-3 font-semibold">Marca</th>
+          <th class="px-6 py-3 font-semibold">Modelo</th>
+          <th class="px-6 py-3 font-semibold">Año</th>
+          <th class="px-6 py-3 font-semibold">Color</th>
+          <th class="px-6 py-3 font-semibold">Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b hover:bg-gray-100">
+          <td class="px-6 py-4 text-sm text-gray-700">Ford</td>
+          <td class="px-6 py-4 text-sm text-gray-700">Fiesta</td>
+          <td class="px-6 py-4 text-sm text-gray-700">2020</td>
+          <td class="px-6 py-4 text-sm text-gray-700">Rojo</td>
+          <td class="px-6 py-4 text-sm text-gray-700">$18,000</td>
+        </tr>
+        <tr class="border-b hover:bg-gray-100">
+          <td class="px-6 py-4 text-sm text-gray-700">Chevrolet</td>
+          <td class="px-6 py-4 text-sm text-gray-700">Malibu</td>
+          <td class="px-6 py-4 text-sm text-gray-700">2021</td>
+          <td class="px-6 py-4 text-sm text-gray-700">Negro</td>
+          <td class="px-6 py-4 text-sm text-gray-700">$22,500</td>
+        </tr>
+        <tr class="border-b hover:bg-gray-100">
+          <td class="px-6 py-4 text-sm text-gray-700">Volkswagen</td>
+          <td class="px-6 py-4 text-sm text-gray-700">Golf</td>
+          <td class="px-6 py-4 text-sm text-gray-700">2022</td>
+          <td class="px-6 py-4 text-sm text-gray-700">Blanco</td>
+          <td class="px-6 py-4 text-sm text-gray-700">$25,000</td>
+        </tr>
+        <tr class="border-b hover:bg-gray-100">
+          <td class="px-6 py-4 text-sm text-gray-700">Honda</td>
+          <td class="px-6 py-4 text-sm text-gray-700">Civic</td>
+          <td class="px-6 py-4 text-sm text-gray-700">2021</td>
+          <td class="px-6 py-4 text-sm text-gray-700">Azul</td>
+          <td class="px-6 py-4 text-sm text-gray-700">$24,000</td>
+        </tr>
+        <tr class="border-b hover:bg-gray-100">
+          <td class="px-6 py-4 text-sm text-gray-700">Toyota</td>
+          <td class="px-6 py-4 text-sm text-gray-700">Corolla</td>
+          <td class="px-6 py-4 text-sm text-gray-700">2022</td>
+          <td class="px-6 py-4 text-sm text-gray-700">Gris</td>
+          <td class="px-6 py-4 text-sm text-gray-700">$23,500</td>
+        </tr>
+        <tr class="border-b hover:bg-gray-100">
+          <td class="px-6 py-4 text-sm text-gray-700">Audi</td>
+          <td class="px-6 py-4 text-sm text-gray-700">A3</td>
+          <td class="px-6 py-4 text-sm text-gray-700">2020</td>
+          <td class="px-6 py-4 text-sm text-gray-700">Plata</td>
+          <td class="px-6 py-4 text-sm text-gray-700">$28,000</td>
+        </tr>
+        <tr class="hover:bg-gray-100">
+          <td class="px-6 py-4 text-sm text-gray-700">BMW</td>
+          <td class="px-6 py-4 text-sm text-gray-700">Serie 3</td>
+          <td class="px-6 py-4 text-sm text-gray-700">2021</td>
+          <td class="px-6 py-4 text-sm text-gray-700">Negro</td>
+          <td class="px-6 py-4 text-sm text-gray-700">$35,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</MainLayout>

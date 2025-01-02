@@ -1,0 +1,134 @@
+---
+
+---
+
+<section class="bg-alabaster-200 rounded-md shadow-md">
+  <style>
+    .Hotspot {
+      background-color: #f0b72f;
+      width: 20px;
+      height: 20px;
+      border-radius: 9999px;
+    }
+    .HotspotAnnotation {
+      font-size: small;
+      display: none;
+    }
+  </style>
+  <script
+    type="module"
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+  ></script>
+
+  <model-viewer
+    src="/basicSedan.glb"
+    alt="3D model"
+    camera-orbit="0deg 75deg 6m"
+    class="w-full h-[25dvh] bg-transparent"
+    camera-controls
+    tone-mapping="neutral"
+    shadow-intensity="1"
+  >
+    <button
+      class="Hotspot"
+      slot="hotspot-11"
+      data-position="-0.5065750965911427m 1.5131167091969886m 0.24101636069996757m"
+      data-normal="0.003018878141387163m 0.9996172369440981m -0.027500290525998373m"
+      data-visibility-attribute="visible"
+    >
+      <div class="HotspotAnnotation">Superior</div>
+    </button><button
+      class="Hotspot"
+      slot="hotspot-12"
+      data-position="-2.025634809060308m 1.0082519666951202m 0.016986376142403614m"
+      data-normal="-0.11769112228613839m 0.9928983839215019m -0.01736660419020857m"
+      data-visibility-attribute="visible"
+    >
+      <div class="HotspotAnnotation">Trasera superior</div>
+    </button><button
+      class="Hotspot"
+      slot="hotspot-13"
+      data-position="-2.434330766870347m 0.5609418943067995m -0.012096971967109182m"
+      data-normal="-0.9736270566164346m 0.1858927913620991m -0.13226573533619873m"
+      data-visibility-attribute="visible"
+    >
+      <div class="HotspotAnnotation">Trasera inferior</div>
+    </button><button
+      class="Hotspot"
+      slot="hotspot-14"
+      data-position="0.8678002170032973m 0.7837276332989028m -0.4914263534157536m"
+      data-normal="0.10516221094489096m -0.5883015489686356m -0.801774405222745m"
+      data-visibility-attribute="visible"
+    >
+      <div class="HotspotAnnotation">Delantera derecha</div>
+    </button><button
+      class="Hotspot"
+      slot="hotspot-15"
+      data-position="-0.798221270235738m 0.7579444278567934m -0.690895565353031m"
+      data-normal="0.125638661407502m 0.10812182830015675m -0.9861666172634128m"
+      data-visibility-attribute="visible"
+    >
+      <div class="HotspotAnnotation">Trasera Derecha</div>
+    </button><button
+      class="Hotspot"
+      slot="hotspot-17"
+      data-position="-0.16680904514276582m 0.4116422468351097m -0.5998193092416396m"
+      data-normal="0.10779499110351787m -0.128006671801071m -0.9858978303391308m"
+      data-visibility-attribute="visible"
+    >
+      <div class="HotspotAnnotation">Central Derecha</div>
+    </button><button
+      class="Hotspot"
+      slot="hotspot-19"
+      data-position="2.424336745662355m 0.3989125972800686m 0.5865310622070177m"
+      data-normal="0.9549057694152663m -0.29505869612380575m 0.03309588160418191m"
+      data-visibility-attribute="visible"
+    >
+      <div class="HotspotAnnotation">Delantera inferior</div>
+    </button><button
+      class="Hotspot"
+      slot="hotspot-20"
+      data-position="1.9332437850704192m 0.9384784014852288m 0.5248025485531047m"
+      data-normal="0.1754370731954465m 0.9842639540413262m 0.021125863853337864m"
+      data-visibility-attribute="visible"
+    >
+      <div class="HotspotAnnotation">Delantera superior</div>
+    </button><button
+      class="Hotspot"
+      slot="hotspot-21"
+      data-position="0.7241287238032263m 0.6944600436623066m 1.2941347337068805m"
+      data-normal="-0.11557226998941157m 0.014583521962618456m 0.9931920112932144m"
+      data-visibility-attribute="visible"
+    >
+      <div class="HotspotAnnotation">Delantera Izquierda</div>
+    </button><button
+      class="Hotspot"
+      slot="hotspot-22"
+      data-position="-0.35475722152524103m 0.6414255982795918m 1.1668499221132098m"
+      data-normal="-0.12054588675956486m 0.003242943400604709m 0.992702459200868m"
+      data-visibility-attribute="visible"
+    >
+      <div class="HotspotAnnotation">Central Izquierda</div>
+    </button><button
+      class="Hotspot"
+      slot="hotspot-23"
+      data-position="-1.1938830401229898m 0.7838002547136469m 1.060679075872093m"
+      data-normal="-0.11861970839522185m -0.4602333876493345m 0.8798378223701512m"
+      data-visibility-attribute="visible"
+    >
+      <div class="HotspotAnnotation">Trasera izquierda</div>
+    </button><button
+      class="Hotspot"
+      slot="hotspot-24"
+      data-position="2.2879348258463983m 0.7735858041858533m 0.6169049924867838m"
+      data-normal="0.000005029117071167118m 0.9999999991541415m -0.00004082186867631639m"
+      data-visibility-attribute="visible"
+    >
+      <div class="HotspotAnnotation">Delantera Central</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+      <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button"> View in your space </button>
+  </model-viewer>
+</section>

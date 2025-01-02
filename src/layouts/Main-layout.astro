@@ -12,21 +12,21 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/icon.svg" type="image/x-icon"/>
+    <link rel="icon" href="/icon.svg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Dosis:wght@200..800&family=Great+Vibes&family=Oxygen:wght@300;400;700&family=Poiret+One&display=swap"
       rel="stylesheet"
     />
-    <title>Deshuace Garcia´s | {title}</title>
+    <title>Multipartes Garcia´s | {title}</title>
   </head>
   <body class="font-content antialiased">
-    <header
+    <div
       class="bg-gradient-to-b from-alabaster-50 to-alabaster-100 text-alabaster-800"
     >
       <Nav />
-    </header>
+    </div>
     <slot />
     <Footer />
   </body>
