@@ -1,8 +1,21 @@
 ---
+// Importación de componentes
 import ComboBox from "./ComboBox.tsx";
+
+// Variable reactiva en Astro para controlar el estado
+let isAdvacent = false;
+
+function handleRadioClick() {
+  isAdvacent = !isAdvacent;
+}
 ---
 
 <section>
-  <input type="radio" /><span class="text-sm pl-2">Busqueda avanzada</span>
-  <ComboBox isAdvacent={true} client:load />
+  <!-- Radio button para activar/desactivar la búsqueda avanzada -->
+  <input type="radio" id="advanceRB" onclick={handleRadioClick} />
+  <span class="text-sm pl-2">Busqueda avanzada</span>
+
+  <!-- Pasamos `isAdvacent` como prop al componente ComboBox -->
+  <ComboBox isAdvacent={isAdvacent} client:load />
 </section>
+

@@ -594,3 +594,17 @@ Cuando implementes escalabilidad horizontal, es importante pensar en la resilien
 5. **Asegura la resiliencia** mediante **backups**, **replicas de base de datos** y **alta disponibilidad**.
 
 Implementando estas prácticas, podrás escalar tanto la base de datos como la API horizontalmente, manejando un alto volumen de consultas y asegurando un rendimiento óptimo a medida que tu plataforma crece.
+
+CHORE: Change business title.
+>> Changed the name from 'Deshuace' to 'Multipartes' based on client request.
+
+FEAT: Add funded page.
+>> Created a funded page according to client specifications.
+
+FIX: Implement search functionality and 3D viewer.
+>> Created a React component for a selector menu and a 3D viewer for selecting car categories. 
+>> Reason: Astro doesn't support basic JS, so a React component was necessary to manage the search.
+
+TASKS: Finalize search component and database schema.
+>> Finished the search component, completed the database schema, and added responsive design to the logo for improved user experience.
+

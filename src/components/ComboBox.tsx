@@ -52,11 +52,8 @@ const categories: section[] = [
 ];
 
 export default function SelectMenu({ isAdvacent = false }: Props) {
-  // Obtener el año actual
   const currentYear = new Date().getFullYear();
   const startYear = 1980;
-
-  // Generar un array con los años desde 1980 hasta el año actual
   const years = Array.from(
     { length: currentYear - startYear + 1 },
     (_, index) => currentYear - index
@@ -80,8 +77,10 @@ export default function SelectMenu({ isAdvacent = false }: Props) {
         name="marca"
         value={marcaSeleccionada}
         onChange={handleMarcaChange}
-        className="w-1/3 h-7 bg-alabaster-100 ring-orange-300 border border-alabaster-300 rounded-md shadow-inner text-center 
-             focus:outline-none focus:ring-1  focus:shadow-md focus:shadow-orange-200 focus:border-alabaster-100 transition-colors duration-200"
+        className={`${
+          isAdvacent ? "w1/4" : "w-1/3"
+        } h-7 bg-alabaster-100 ring-orange-300 border border-alabaster-300 rounded-md shadow-inner text-center 
+           focus:outline-none focus:ring-1  focus:shadow-md focus:shadow-orange-200 focus:border-alabaster-100 transition-colors duration-200`}
       >
         <option value="">Marca</option>
         {modelos.map((item) => (
@@ -97,8 +96,10 @@ export default function SelectMenu({ isAdvacent = false }: Props) {
       <select
         id="modelo"
         name="modelo"
-        className="w-1/3 h-7 bg-alabaster-100 ring-orange-300 border border-alabaster-300 rounded-md shadow-inner text-center 
-             focus:outline-none focus:ring-1  focus:shadow-md focus:shadow-orange-200 focus:border-alabaster-100 transition-colors duration-200"
+        className={`${
+          isAdvacent ? "w1/4" : "w-1/3"
+        } h-7 bg-alabaster-100 ring-orange-300 border border-alabaster-300 rounded-md shadow-inner text-center 
+           focus:outline-none focus:ring-1  focus:shadow-md focus:shadow-orange-200 focus:border-alabaster-100 transition-colors duration-200`}
       >
         <option value="">Modelo</option>
         {modelosDisponibles.map((modelo, index) => (
@@ -110,8 +111,10 @@ export default function SelectMenu({ isAdvacent = false }: Props) {
       <select
         name="year"
         id="year"
-        className="w-1/3 h-7 bg-alabaster-100 ring-orange-300 border border-alabaster-300 rounded-md shadow-inner text-center 
-             focus:outline-none focus:ring-1  focus:shadow-md focus:shadow-orange-200 focus:border-alabaster-100 transition-colors duration-200"
+        className={`${
+          isAdvacent ? "w1/4" : "w-1/3"
+        } h-7 bg-alabaster-100 ring-orange-300 border border-alabaster-300 rounded-md shadow-inner text-center 
+           focus:outline-none focus:ring-1  focus:shadow-md focus:shadow-orange-200 focus:border-alabaster-100 transition-colors duration-200`}
       >
         <option value="">Año</option>
         {years.map((year) => (
@@ -124,8 +127,10 @@ export default function SelectMenu({ isAdvacent = false }: Props) {
         <select
           id="modelo"
           name="modelo"
-          className="w-1/3 h-7 bg-alabaster-100 ring-orange-300 border border-alabaster-300 rounded-md shadow-inner text-center 
-             focus:outline-none focus:ring-1  focus:shadow-md focus:shadow-orange-200 focus:border-alabaster-100 transition-colors duration-200"
+          className={`${
+            isAdvacent ? "w1/4" : "w-1/3"
+          } h-7 bg-alabaster-100 ring-orange-300 border border-alabaster-300 rounded-md shadow-inner text-center 
+             focus:outline-none focus:ring-1  focus:shadow-md focus:shadow-orange-200 focus:border-alabaster-100 transition-colors duration-200`}
         >
           <option value="">Categorias</option>
           {categories.map((cat, index) => (
