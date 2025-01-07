@@ -7,7 +7,9 @@ import CardIcon from "./Card-Icon.astro";
 <footer
   class="text-sm bg-gradient-to-b from-fiord-600 to-fiord-700 md:text-lg rounded-t-xl p-5 text-alabaster-100 m-0"
 >
-  <section class="flex space-x-2 mb-3 md:space-x-3 md:p-5 divide-x-2 divide-alabaster-400 md:mb-0">
+  <section
+    class="flex space-x-2 mb-3 md:space-x-3 md:p-5 divide-x-2 divide-alabaster-400 md:mb-0"
+  >
     {
       headLiners.map((headLiener) => (
         <CardIcon
@@ -25,7 +27,10 @@ import CardIcon from "./Card-Icon.astro";
         {
           helpLinks.map((route) => (
             <li>
-              <a href={route.url} class="hover:text-alabaster-400 transition-colors duration-300">
+              <a
+                href={route.url}
+                class="hover:text-alabaster-400 transition-colors duration-300"
+              >
                 {route.title}
               </a>
             </li>
@@ -39,10 +44,16 @@ import CardIcon from "./Card-Icon.astro";
         {
           socialMedia.map((link) => (
             <li class="flex space-x-2">
-              <a href={link.url} class="hover:text-alabaster-400 transition-colors duration-300">
+              <a
+                href={link.url}
+                class="hover:text-alabaster-400 transition-colors duration-300"
+              >
                 {link.title}
               </a>
-              <Icon name={link.icon ? link.icon : "phone"} class="w-5 h-5 text-alabaster-100 hover:text-alabaster-400 transition-colors duration-300" />
+              <Icon
+                name={link.icon ? link.icon : "phone"}
+                class="w-5 h-5 text-alabaster-100 hover:text-alabaster-400 transition-colors duration-300"
+              />
             </li>
           ))
         }
@@ -50,8 +61,8 @@ import CardIcon from "./Card-Icon.astro";
     </section>
   </nav>
   <h3 class="text-center font-subtitle text-sm pt-4">
-    &copy; 2025-2026 El precente canal de distribucion pertenece a Multipartes
-    Garcia SA de Cv, Idntificado con la marca Multipartes Garcia´s. Carretera a
-    colotlam.
+    &copy; 2025-2026 Este canal de distribución pertenece a Multipartes García
+    S.A. de C.V., identificado con la marca Multipartes García's. Carretera a
+    Colotlán.
   </h3>
 </footer>

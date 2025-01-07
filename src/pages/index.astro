@@ -1,26 +1,44 @@
 ---
 import Layout from "../layouts/Main-layout.astro";
+import Logo from "../components/Logo.astro";
+import MapCards from "../components/MapCards";
 ---
 
 <Layout title="Inicio">
   <main>
     <header
-      class="flex items-center justify-center text-center bg-fiord-700 w-full h-[65vh]"
+      class="flex items-center justify-center text-center bg-fiord-700 w-full h-[55dvh] md:h-[65dvh]"
     >
-      <h1
-        class="flex items-center justify-center md:text-6xl font-special bg-alabaster-50 rounded-full w-fit text-alabaster-800 h-28 shadow-xl px-3"
+      <img
+        src="/bg-1.webp"
+        alt="bg"
+        class="relative w-full h-full object-cover object-center"
+      />
+      <section
+        class="absolute flex flex-col items-center justify-center text-center"
       >
-        M<span class="relative -left-2 font-specialVariant mr-5 italic"
-          >ultipartes</span
-        >
-        Garcia ´<span
-          class="relative font-specialVariant inline-block rotate-[13deg] top-2 right-5 text-7xl"
-          >s</span
-        >
-      </h1>
+        <Logo />
+        <h2 class="text-lg md:text-2xl font-subtitle font-bold text-alabaster-950">
+          Venta e instalación de autopartes usadas <br /> Atención y servicio especializado
+          a tu alcance.
+        </h2>
+        <h4 class="font-specialVariant text-lg md:text-2xl text-alabaster-800">
+          Calidad, confianza y servicio a tu alcance.
+        </h4>
+      </section>
     </header>
+    <section
+      class="relative flex items-center justify-center gap-4 bottom-20 mx-8 md:mx-16 lg:mx-32"
+    >
+      <MapCards client:load />
+    </section>
     <section>
-      
+      <article class="px-4 pb-4 text-center">
+        <h3 class="text-alabaster-300 font-title md:text-lg">
+          Estamos trabajando para ofrecerte el mejor servicio. Nuestra página
+          aún está en desarrollo y pronto estará disponible con nuevas mejoras.
+        </h3>
+      </article>
     </section>
   </main>
 </Layout>

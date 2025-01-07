@@ -4,7 +4,7 @@ interface links {
   icon?: string;
 }
 
-interface hedLiner {
+interface HeadLiner {
   icon: string;
   title: string;
   description: string;
@@ -103,6 +103,14 @@ interface VehicleSystems {
   airQualityControlSystem: {
     airFilters: string;
   };
+}
+
+interface cardHeader {
+  title: string;
+  content: string;
+  buttonText: string;
+  action: () => void;
+  icon: string;
 }
 
 const vehicleSystems: VehicleSystems = {
