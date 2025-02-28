@@ -9,5 +9,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page</title>
   </head>
-  <body> Hello, world </body>
+  <body>
+    Hello, world
+    <div
+      class="fb-like"
+      data-share="true"
+      data-width="450"
+      data-show-faces="true"
+    >
+    Hello
+    </div>
+  </body>
+
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '624216220526828',
+        xfbml      : true,
+        version    : 'v22.0'
+      });
+      FB.AppEvents.logPageView();
+    };
+  
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
 </html>
