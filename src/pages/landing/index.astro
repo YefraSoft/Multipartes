@@ -1,42 +1,46 @@
----
+<form id="facebookForm" method="post" enctype="multipart/form-data">
+  <input type="file" id="image" name="image" accept="image/*" required />
+  <input type="text" id="title" name="title" placeholder="Título" required />
+  <textarea
+    id="description"
+    name="description"
+    placeholder="Descripción"
+    required></textarea>
+  <button type="submit">Publicar en Facebook</button>
+</form>
 
----
+<script>
+  const form = document.getElementById("facebookForm");
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page</title>
-  </head>
-  <body>
-    Hello, world
-    <div
-      class="fb-like"
-      data-share="true"
-      data-width="450"
-      data-show-faces="true"
-    >
-    Hello
-    </div>
-  </body>
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId      : '624216220526828',
-        xfbml      : true,
-        version    : 'v22.0'
-      });
-      FB.AppEvents.logPageView();
-    };
-  
-    (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) {return;}
-       js = d.createElement(s); js.id = id;
-       js.src = "https://connect.facebook.net/en_US/sdk.js";
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
-  </script>
-</html>
+    const description = document.getElementById("description").value;
+    try {
+
+      // Crear la publicación
+      const postData = {
+        message: description,
+        access_token: "624216220526828|U0mNGKpE-ZNy3tvivws7DLFGARU",
+      };
+
+      const postResponse = await fetch(
+        `https://graph.facebook.com/${61572556524376}/feed`,
+        {
+          method: "POST",
+          body: new URLSearchParams(postData),
+        }
+      );
+
+      const postResult = await postResponse.json();
+
+      if (postResult.error) {
+        alert("Error al crear la publicación: " + postResult.error.message);
+      } else {
+        alert("Publicación realizada correctamente.");
+      }
+    } catch (error) {
+      alert("Error al realizar la publicación: " + error.message);
+    }
+  });
+</script>
